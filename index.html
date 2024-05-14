@@ -7,7 +7,7 @@
   <meta property="og:title" content="Enhancing Unified Modality Sound Separation with Multi-Modality Joint Queries"/>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">    
   
-  <title>UMSS</title>
+  <title>OmniSEP</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -54,8 +54,7 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
                 <p>
-Sound separation is pivotal in signal processing and finds diverse applications in speech recognition, speech enhancement, music analysis, and beyond. Conventional sound separation methods entail training specialized models for each modal query, limiting their ability to concurrently utilize multiple modalities for joint retrieval. To overcome this constraint, we introduce a novel sound separation approach based on unified modal mixing, termed Unified Modal Sound Separation (UMSS). Specifically, we propose a query-mixup strategy, which blends different modal queries in random proportions during training to establish a unified representation of multi-modal queries, thereby facilitating unified sound separation. Moreover, we introduce a Query-Aug strategy, leveraging retrieval enhancement techniques to mitigate limitations stemming from restricted text queries during training and bolster robustness to out-of-domain queries. Additionally, we explore the utilization of noise information in sound separation tasks, introducing the concept of negative queries to enable more flexible sound separation by incorporating negative queries to exclude specific conceptual content. Experimental evaluations conducted on MUSIC, VGGSOUND-CLEAN+, and MUSIC-CLEAN+ datasets demonstrate that our method achieves state-of-the-art performance across three tasks (Text-Queried Sound Separation, Image-Queried Sound Separation, and Audio-Queried Sound Separation), thereby realizing unified modality sound separation.                </p>
-            </div>
+Sound separation is a crucial component of signal processing and finds applications in diverse fields like speech recognition, speech enhancement, and music analysis. Traditional methods typically involve training dedicated models for individual modal queries, restricting their ability to handle multi-modal composed queries effectively. To overcome this constraint, we introduce a novel approach called Omni-modal Sound Separation \textbf{(OmniSEP)}, capable of performing sound separation across queries of various modalities. We introduce a \texttt{Query-Mixup} strategy, blending various modal queries during training to create a unified representation, facilitating sound separation across modalities. Moreover, we explore utilizing noise information by introducing negative queries, enabling more flexible sound separation. Additionally, our \texttt{Query-Aug} strategy employs retrieval augmentation to address limitations with restricted text queries during training, improving robustness to out-of-domain queries. Experimental evaluations on the MUSIC, VGGSOUND-CLEAN+, and MUSIC-CLEAN+ datasets demonstrate the effectiveness of OmniSEP, achieving state-of-the-art performance across Text-, Image-, and Audio-Queried Sound Separation tasks. The results obtained by employing negative queries across the three tasks also demonstrate the capability of our omniSEP to perform sound separation based on multi-modal combined queries.            </div>
         </div>
       </div>
       <!--/ Abstract. -->
@@ -67,7 +66,7 @@ Sound separation is pivotal in signal processing and finds diverse applications 
   <section class="hero">
     <div class="hero-body">
         <div class="container">
-          <h1 class="title is-3">UMSS</h1>
+          <h1 class="title is-3">OmniSEP</h1>
             <h2><a href="#Main-Result">A.Sound Separation with Queries of Different Modalities.</a></h2>
             <h4><a href="#text-query">A.1.Text-Query</a></h4>
             <h4><a href="#image-query">A.2.Image-Query</a></h4>
@@ -443,8 +442,8 @@ Sound separation is pivotal in signal processing and finds diverse applications 
                         <th>Mixture</th>
                         <th>Interference</th>
                         <th>Target</th>
-                        <th>UMSS</th>
-                        <th>UMSS+Neg</th>
+                        <th>OmniSEP</th>
+                        <th>OmniSEP+Neg</th>
 
                       </tr>
 
@@ -568,8 +567,8 @@ Sound separation is pivotal in signal processing and finds diverse applications 
                         <th>Query</th>
                         <th>Mixture</th>
                         <th>Target</th>
-                        <th>UMSS</th>
-                        <th>UMSS+Query-Aug</th>
+                        <th>OmniSEP</th>
+                        <th>OmniSEP+Query-Aug</th>
 
                       </tr>
 
